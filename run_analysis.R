@@ -61,4 +61,4 @@ write.csv(finaldf, "finaldf.csv")
 # Create an independent tidy data set with the average of each variable for each 
 # activity and subject
 summdf <- finaldf %>% group_by(subjectid, activityid) %>% summarize_all(funs(mean))
-write.csv(summdf, "summdf.csv")
+write.table(summdf, "summdf.txt", row.names = FALSE)
